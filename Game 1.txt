@@ -1,0 +1,57 @@
+﻿#include <stdlib.h> 
+#include <stdio.h> 
+#include <time.h> 
+void mode1() 
+{ srand(time(NULL)); 
+int chus,chpc,p,max=1000,min=0,i=0; 
+char zn;
+printf("Загадайте число :"); 
+scanf("%d/n",&chus); 
+while (chus!=chpc) 
+{ 
+chpc = (min+1)+rand()%(max-min-1);
+i++;
+printf("Возможное число:%d ", chpc); 
+scanf("%c/n",&zn);
+scanf("%c/n",&zn);
+if (zn == '=') printf("Я угадал!"); 
+if (zn == '>') min = chpc;
+if (zn == '<') max = chpc;
+}
+printf("Количество попыток:%d  ",i);
+}
+void mode2() 
+{ 
+srand(time(NULL)); 
+int ch1,ch2,i; 
+i=0; 
+ch1 = (rand() % 1000); 
+printf("Введите отгадку: "); 
+while (ch1!=ch2) 
+{ 
+scanf("%d/n", &ch2); 
+i++; 
+if (ch1==ch2) 
+printf("Вы угадали!"); 
+else if (ch1<ch2) 
+printf("\nЗагаданное число меньше!Введите отгадку еще раз: \n"); 
+else 
+printf("Загаданное число больше!Введите отгадку еще раз: "); 
+} 
+printf("Число потраченных попыток :%d ",i); 
+} 
+int main() 
+{ 
+int input; 
+printf("выбери режим:\n"); 
+printf("1.загадай число сам\n"); 
+printf("2.отгадай число компьютера\n"); 
+scanf("%d",&input); 
+switch(input) 
+{ 
+case 1:{mode1();break;} 
+case 2:{mode2();break;} 
+default:printf("error"); 
+} 
+return 0; 
+}
