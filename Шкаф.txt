@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+	float height_back_wall = 0;  
+	int width_back_wall = 0;    
+	float dvp_wall_wide = 0.5;
+	float depth_sidewall = 0;
+	float thickness_sidewall = 1.5;
+	float door_thickness = 1;
+	float density_dsp = 0.8;
+	float density_dvp = 0.82;
+	float density_wood = 0.52;
+	float weight_covers = 0;
+	float weight_sidewall = 0;
+	float weight_back_wall = 0;
+	float m4 = 0;.
+	int count_shelves = 0;
+	int distance_between_shalves = 40;
+	float weight_door = 0;
+	float weight_closet = 0;
+
+	printf("Вас приветствуют умелые руки. Создайте свой шкаф так, как вы считаете нужным.\n"
+		"Введите ширину(80-120 см) и глубину (50-90 см) вашего шкафа\n"
+		"Мы можем посчитать его вес для вашего удобства\n"
+		"С помощью этой информации вы поймете как грузчиков надо будет вызывать.\n");
+	printf("Ширина, Глубина\n");
+	scanf("%d%d", &width_back_wall, &depth_sidewall);
+	if (((width_back_wall >= 80) && (width_back_wall <= 120)) &&
+	   ((depth_sidewall >= 50) && (depth_sidewall <= 90)))
+	{
+		height_back_wall = height_back_wall + thickness_sidewall;
+		do
+		{
+			height_back_wall = height_back_wall + thickness_sidewall + distance_between_shalves;
+			count_shelves  = count_shelves  + 1;
+		} while (height_back_wall <= 220 - 40); 
+		count_shelves  = count_shelves  - 1;
+		weight_covers = width_back_wall * depth_sidewall * thickness_sidewall * 2 * density_dsp;
+		weight_sidewall = (height_back_wall - thickness_sidewall - thickness_sidewall) * depth_sidewall * thickness_sidewall * density_dsp * 2;
+		weight_back_wall = height_back_wall * width_back_wall * dvp_wall_thickness * density_dvp;
+		m4 = density_dsp * (width_back_wall - thickness_sidewall - thickness_sidewall) * depth_sidewall * count_shelves * thickness_sidewall; 
+		weight_door = density_wood * (height_back_wall - thickness_sidewall) * width_back_wall * door_thickness;
+		weight_closet = (weight_covers + weight_sidewall + weight_back_wall + m4 + weight_door) / 1000;
+		printf("\n %f kg\n", weight_closet);
+	}
+	else
+	{
+		if (width_back_wall > 120 || width_back_wall < 80) printf("Ширина введена некорректно\n"); 
+	    if (depth_sidewall < 50 || depth_sidewall > 90) printf("Ширина введена некорректно\n");
+	}
+	system("pause");
+	return 0;
+}

@@ -1,0 +1,279 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct thing
+{
+  int barcode;
+  char name[15];
+  int cost;
+  float discount;
+  float total;
+  int num;
+};
+float a,b,c;
+void addcheese()
+    {   
+        struct thing obj = { 1001,"Сыр", 63, 0.4 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name, obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addsausage()
+    {
+        struct thing obj = { 1002,"Сосиски", 67, 0.5 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name, obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addmilk()
+    {
+        struct thing obj = { 1003,"Молоко", 50, 0.4 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name,obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addflour()
+    {
+        struct thing obj = { 1004, "Мука", 20, 0.1 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name,obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addsugar()
+    {
+        struct thing obj = { 1005, "Сахар",37, 0.2 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name, obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.num * obj.cost * obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addsalt()
+    {
+        struct thing obj = { 1006, "Соль", 36, 0.2 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name, obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addbread()
+    {   
+        struct thing obj = { 1007, "Хлеб", 12, 0.1 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name, obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+    
+void addwater()
+    {   
+        struct thing obj = { 1008,"Вода 0.5 ", 7, 0.1 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name,obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+void addtoiletpaper()
+    {
+        struct thing obj = { 1009,"Туалетная бумага ", 25, 0.3 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name,obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num;
+    }
+void addapples()
+    {
+      struct thing obj = { 1010,"Яблоки", 35, 0.2 };
+	    printf ("Введите количество:");
+	    scanf ("%d", &obj.num);
+	    printf ("\n %s %d Сведения о товаре:\n",obj.name,obj.barcode);
+	    printf ("-------------------\n");
+	    printf ("Цена %d\n", obj.cost);
+	    printf ("Количество %d\n", obj.num);
+	    printf ("Скидка %f\n", obj.discount);
+	    float total = obj.num * obj.cost - obj.num * obj.cost * obj.discount;
+	    obj.total=total;
+	    printf ("Итог: %f\n", obj.total);
+	    a=a+total;
+	    c=c+obj.cost*obj.num; 
+    }
+    
+int savecheck()
+    {
+        FILE *fc;
+        struct thing obj;
+        fc = fopen("check.txt","a+");
+        fprintf(fc,"Товар %s (%d) ------------------%f\n%d руб\n%d Количество\n%f Скидка\n\n", obj.name, obj.barcode, obj.total, obj.cost, obj.num,obj.discount);
+        fclose(fc);
+    }
+
+int main (void)
+{ 
+  extern float a;
+  FILE *fc;
+  int answer = 0, barcode;
+  printf
+    ("\nДобро пожаловать в магазин первостепенно важных продуктов!\n  \nУ нас в продаже:\n \nЯблоки 1кг 1010\n \nТуалетная бумага 1 шт 1009\n \nВода 0.5 1008\n \nХлеб 1007\n \nСоль 1 кг 1006\n \nСахар 1 кг 1005\n \nМука 2 кг 1004\n \nМолоко 1л 1003\n \nСосиски 10 шт 1002\n \nСыр 1001\n \nСо временем ассортимент увеличится)\n");
+  printf
+    ("---------------------------------------------------------------------------------------\n");
+  while (answer != 2)
+    {
+      printf ("Введите штрих-код продукта\n");
+      scanf ("%d", &barcode);
+      switch (barcode)
+	{
+	case 1010:
+	  {
+	    addapples();
+	    savecheck();
+	    break;
+	  }
+	case 1009:
+	  {
+	    addtoiletpaper();
+	    savecheck();
+	    break;
+	  }
+	    
+	case 1008:
+	  {
+	    addwater();
+	    savecheck();
+	    break;
+	  }
+	case 1007:
+	  {
+	    addbread();
+	    savecheck();
+	    break;
+	  }
+	case 1006:
+	  {
+	    addsalt();
+	    savecheck();
+	    break;
+	  }
+	case 1005:
+	  {
+	    addsugar();
+	    savecheck();
+	    break;
+	  }
+	case 1004:
+	  {
+	    addflour();
+	    savecheck();
+	    break;
+	  }
+	case 1003:
+	  {
+	    addmilk();
+	    savecheck();
+	    break;
+	  }
+	case 1002:
+	  {
+	    addsausage();
+	    savecheck();
+	    break;
+	  }
+	case 1001:
+	  {
+	    addcheese();
+	    savecheck();
+	    break;
+	  }
+	default:
+	  printf ("Ошибка!");
+	}
+      printf ("Готовы к оплате?\n");
+      printf ("1. Нет        ");
+      printf ("2. Да\n");
+      scanf ("%d", &answer);
+    }
+b=(c-a)/c;
+fc = fopen("check.txt","a+");
+fprintf(fc,"------------------------------------------\nОбщий итог: %f\nОбщая скидка: %f",a,b);
+fclose(fc);
+system("pause");
+}

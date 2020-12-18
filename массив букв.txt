@@ -1,0 +1,37 @@
+#include<ctype.h>
+#include<stdlib.h>
+#include<stdio.h>
+
+int main()
+{
+
+	char a[] = "Меня зовут Саня, мне 18 лет.";
+	int characters = 0;
+	int words = 0;
+	int digits = 0;
+	printf("Введите что-нибудь\n");
+
+
+	printf("\nДлина массива%d \n", strlen(a));
+	int size = strlen(a);
+
+	size_t i = 0;
+	while (i < size)
+	{
+		if (a[i] == ' ')
+		{
+			if ((a[i - 1] >= '0' && a[i - 1] <= '9'))
+				digits++;
+			if ((a[i - 1] >= 'a' && a[i - 1] <= 'z') || (a[i - 1] >= 'A' && a[i - 1] <= 'Z') || (a[i - 1] = '.' || ','))
+				words += 1;
+
+		}
+		i++;
+	}
+
+	printf("Количество букв %d\n", words);
+	printf("Количество знаков %d\n", digits);
+
+	system("pause");
+	return 0;
+}
