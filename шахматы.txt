@@ -1,0 +1,222 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main(void)
+{
+    int n,m,i,j;
+    printf("Выбери своего воина:\n");
+    printf("1. Король\n");
+    printf("2. Королева\n");
+    printf("3. Ладья\n");
+    printf("4. Слон\n");
+    printf("5. Конь\n");
+    printf("6. Пешка\n");
+    printf("Кого ты выбрал: ");
+    int input;
+    scanf("%d", &input);
+    switch (input) 
+    {
+        case 1:
+        {
+            printf("Король\n");
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if (((((abs(i - m) == 1) && (n == j)) ||
+               (abs(j - n) == 1) && (m == i)) ||
+               ((abs(i - m) == 1)) && (abs(n - j) == 1))) 
+            { 
+               printf("Он может так сделать\n");
+                
+            } 
+            else
+            {
+                printf("Он не может так сделать но так может:\n");
+                if ((i == m) || (j == n) ||
+                (abs(i - m) == abs(j - n)))
+                {
+                    printf("Королева\n");
+                }
+                if ((i == m) || (j == n)) printf("Ладья\n");
+                if (abs(i - m) == abs(j - n)) printf("Слон\n");
+                if (((abs(j - n)) == 1) && (i == m)) printf("Пешка\n");
+                if (((abs(i - m)) == 1) && ((abs(j - n)) ==2) ||
+                ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+                {
+                    printf("Конь\n");
+                    
+                }
+            }
+            break;
+        }
+        
+        case 2:
+        {
+            printf("Королева\n");
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if ((i == m) || (j == n) ||
+               (abs(i - m) == abs(j - n)))
+            {
+                printf("Она может так сделать\n");
+            } 
+            else 
+            {
+                printf("Она не может так сделать но так может:\n");
+                if (((((abs(i - m) == 1) && (n == j)) ||
+                (abs(j - n) == 1) && (m == i)) ||
+                ((abs(i - m) == 1)) && (abs(n - j) == 1)))
+                {
+                    printf("Король\n");
+                }
+                if ((i == m) || (j == n)) printf("Ладья\n");
+                if (abs(i - m) == abs(j - n)) printf("Слон\n");
+                if (((abs(j - n)) == 1) && (i == m)) printf("Пешка\n");
+                if (((abs(i - m)) == 1) && ((abs(j - n)) == 2) ||
+                ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+                {
+                    printf("Конь\n");
+                }
+            }
+            break;
+        }
+        
+        case 3:
+        {
+            printf("Ладья\n");
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if ((i == m) || (j == n)) printf("Она может так сделать\n"); 
+            else 
+            {
+                printf("Она не может так сделать но так может:\n");
+                if (((((abs(i - m) == 1) && (n == j)) ||
+                   (abs(j - n) == 1) && (m == i)) ||
+                   ((abs(i - m) == 1)) && (abs(n - j) == 1)))
+                {
+                    printf("Король\n");
+                }
+                if ((i == m) || (j == n) ||
+                   (abs(i - m) == abs(j - n)))
+                {
+                    printf("Королева\n");
+                }
+                if (abs(i - m) == abs(j - n)) printf("Слон\n");
+                if (((abs(j - n)) == 1) && (i == m)) printf("Пешка\n");
+                if (((abs(i - m)) == 1) && ((abs(j - n)) == 2) ||
+                   ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+                {
+                    printf("Конь\n");
+                }
+            }
+            break;
+        }
+      
+        case 4:
+        {
+            printf( "Слон\n" );
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if (abs(i - m) == abs(j - n)) printf("Он может так сделать\n"); 
+            else 
+            {
+                printf("Он не может так сделать но так может:\n");
+                if (((((abs(i - m) == 1) && (n == j)) ||
+                   (abs(j - n) == 1) && (m == i)) ||
+                   ((abs(i - m) == 1)) && (abs(n - j) == 1)))
+                {
+                    printf("Король\n");
+                }
+                if ((i == m) || (j == n) ||
+                   (abs(i - m) == abs(j - n)))
+                {
+                    printf("Королева\n");
+                }
+                if  ((i == m) || (j == n)) printf("Ладья\n");
+                if (((abs(j - n)) == 1) && (i == m)) printf("Пешка\n");
+                if (((abs(i - m)) == 1) && ((abs(j - n)) == 2) ||
+                   ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+                {
+                    printf("Конь\n");
+                }
+            }
+            break;
+        }
+        
+        case 5:
+        {
+            printf( "Конь\n" );
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if (((abs(i - m)) == 1) && ((abs(j - n)) == 2) ||
+               ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+            {
+                printf("Он может так сделать\n");
+            } 
+            else 
+            {
+                printf("Он не может так сделать но так может:\n");
+                if (((((abs(i - m) == 1) && (n == j)) ||
+                   (abs(j - n) == 1) && (m == i)) ||
+                   ((abs(i - m) == 1)) && (abs(n - j) == 1)))
+                {
+                    printf("Король\n");
+                }
+                if ((i == m) || (j == n) ||
+                   (abs(i - m) == abs(j - n)))
+                {
+                    printf("Королева\n");
+                }
+                if ((i == m) || (j == n)) printf("Ладья\n");
+                if (abs(i - m) == abs(j - n)) printf("Слон\n");
+                if (((abs(j - n)) == 1) && (i == m)) printf("Пешка\n");
+            }
+            break;
+        }
+         
+        case 6:
+        {
+            printf( "Пешка\n" );
+            printf("Введите начальные координаты букву и число\n");
+            scanf("%d%d", &m, &n);
+            printf("Введите конечные координаты букву и число\n");
+            scanf("%d%d", &i, &j); 
+            if (((abs(j - n)) == 1) && (i == m)) printf("Он может так сделать\n");
+            else 
+            {
+                printf("Он не может так сделать но так может:\n");
+                if (((((abs(i - m) == 1) && (n == j)) ||
+                   (abs(j - n) == 1) && (m == i)) ||
+                   ((abs(i - m) == 1)) && (abs(n - j) == 1)))
+                {
+                    printf("Король\n");
+                }
+                if ((i == m) || (j == n) ||
+                   (abs(i - m) == abs(j - n)))
+                {
+                    printf("Королева\n");
+                }
+                if ((i == m) || (j == n)) printf("Ладья\n");
+                if (abs(i - m) == abs(j - n)) printf("Слон\n");
+                if (((abs(i - m)) == 1) && ((abs(j - n)) == 2) ||
+                   ((abs(i - m)) == 2) && ((abs(j - n)) == 1))
+                {
+                    printf("Конь\n");
+                }
+            }
+            break;
+        }
+    } 
+system("pause");
+return 0;
+}
