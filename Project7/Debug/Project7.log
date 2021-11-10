@@ -1,0 +1,3 @@
+﻿  tbitfield.cpp
+C:\Users\Alexandr\source\repos\Project7\tbitfield.cpp(148,5): error C2561: TBitField::operator !=: функция должна возвращать значение
+C:\Users\Alexandr\source\repos\Project7\tbitfield.cpp(146): message : см. объявление "TBitField::operator !="
