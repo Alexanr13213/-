@@ -1,21 +1,24 @@
+package com.Clockss;
+
 import java.util.Scanner;
 
-class Clocks {
-    static int time_hour;//кол-во часов
-    static int time_minute;
+public class Clock {
+    int time_hour;//кол-во часов
+    int time_minute;
     String marka;
     int cost;
 
-    public Clocks(String marka, int cost, int time_hour, int time_minute) {
+    public Clock(String marka, int cost, int time_hour, int time_minute) {
         this.time_hour = time_hour;
         this.time_minute = time_minute;
         this.marka = marka;
         this.cost = cost;
     }
 
+    public Clock() {
+    }
 
-
-    static void forward(int hour, int minute) {
+    public void forward(int hour, int minute) {
         if (time_minute + minute >= 60) {
             time_minute = (time_minute + minute) - 60;
             time_hour += 1;
@@ -28,19 +31,15 @@ class Clocks {
         System.out.printf("%d:%d\n", time_hour, time_minute);
     }
 
-    public static void set_time(int hour, int minute) {
+    public void set_time() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите текущее время(Часы): ");
-        hour = scanner.nextInt();
+        int hour = scanner.nextInt();
         System.out.println("Введите текущее время(Минуты): ");
-        minute = scanner.nextInt();
-        if (hour < 24 && hour >= 0 && minute < 60 && minute >= 0) {
-            time_hour = hour;
-            time_minute = minute;
-        } else System.out.printf("Ошибка!");
-    }
-
-    public static void forward() {
+        int minute = scanner.nextInt();
+        time_hour = hour;
+        time_minute = minute;
+        System.out.printf("%d:%d\n", time_hour, time_minute);
     }
 
     @Override
@@ -53,38 +52,32 @@ class Clocks {
                 '}';
     }
 
-    void doCost() { System.out.println("Стоимость часов: " + cost);}
-
-    void doMarka() {
-        System.out.println("Марка часов: " + marka);
+    public void check(int hour, int minute) throws TimeException {
+        if (((time_hour > 24) || (time_hour < 0)) || ((time_minute > 60) || (time_minute < 0)))
+            throw new TimeException("Exception: time is wrong!");
+        else {
+            System.out.println("Все за@бись!");
+        }
     }
 
-    void doTime_hour() {
-        System.out.println("Часы: " + time_hour);
-    }
-
-    void doTime_minute() {
-        System.out.println("Минуты: " + time_minute + "\n");
-    }
 }
-
-class quartz extends Clocks {
+    class quartz extends Clock {
     public quartz(String marka, int cost, int time_hour, int time_minute) {
         super(marka, cost, time_hour, time_minute);
     }
 }
-
-class casio extends Clocks {
+    class casio extends Clock {
     public casio(String marka, int cost, int time_hour, int time_minute) {
         super(marka, cost, time_hour, time_minute);
     }
 }
-
-class Omega extends Clocks {
+    class Omega extends Clock {
     public Omega(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);}
+        super(marka, cost, time_hour, time_minute);
+    }
 }
-
-class Tissot extends Clocks {
+    class Tissot extends Clock {
     public Tissot(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);}}
+        super(marka, cost, time_hour, time_minute);}
+
+    }
