@@ -2,7 +2,7 @@ package com.Clockss;
 
 import java.util.Scanner;
 
-public class Clock {
+public class Clock extends Clock1 {
     int time_hour;//кол-во часов
     int time_minute;
     String marka;
@@ -42,14 +42,11 @@ public class Clock {
         System.out.printf("%d:%d\n", time_hour, time_minute);
     }
 
-    @Override
-    public String toString() {
-        return "Clocks{" +
-                "time_hour=" + time_hour +
-                ", time_minute=" + time_minute +
-                ", marka='" + marka + '\'' +
-                ", cost=" + cost +
-                '}';
+    public void String() {
+        System.out.printf("%dУстановленное время(часы)\n", time_hour);
+        System.out.printf("%dУстановленное время(минуты)\n", time_minute);
+        System.out.printf("%sМарка часов\n",marka);
+        System.out.printf("%dСтоимость часов\n",cost);
     }
 
     public void check(int hour, int minute) throws TimeException {
@@ -61,23 +58,4 @@ public class Clock {
     }
 
 }
-    class quartz extends Clock {
-    public quartz(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);
-    }
-}
-    class casio extends Clock {
-    public casio(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);
-    }
-}
-    class Omega extends Clock {
-    public Omega(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);
-    }
-}
-    class Tissot extends Clock {
-    public Tissot(String marka, int cost, int time_hour, int time_minute) {
-        super(marka, cost, time_hour, time_minute);}
 
-    }

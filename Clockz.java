@@ -49,15 +49,13 @@ public class Clockz extends Clock {
         System.out.printf("%d:%d:%d\n", time_hour, time_minute, time_second);
     }
 
-    @Override
-    public String toString() {
-        return "Clockz{" +
-                "time_hour=" + time_hour +
-                ", time_minute=" + time_minute +
-                ", time_second=" + time_second +
-                ", marka='" + marka + '\'' +
-                ", cost=" + cost +
-                '}';
+
+    public void String () {
+        System.out.printf("%dУстановленное время(часы)", time_hour);
+        System.out.printf("%dУстановленное время(минуты)", time_minute);
+        System.out.printf("%dУстановленное время(минуты)", time_second);
+        System.out.printf("%sМарка часов",marka);
+        System.out.printf("%dСтоимость часов",cost);
     }
 
     public void check(int hour, int minute) throws TimeException {
@@ -69,25 +67,5 @@ public class Clockz extends Clock {
     }
 
 }
-        class Rolex extends Clockz {
-            public Rolex(String marka, int cost, int time_hour, int time_minute, int time_second) {
-                super(marka, cost, time_hour, time_minute, time_second);
-            }
-        }
-
-        class Cartier extends Clockz {
-            public Cartier(String marka, int cost, int time_hour, int time_minute, int time_second) {
-                super(marka, cost, time_hour, time_minute, time_second);
-            }
-        }
-
-        class Orient extends Clockz {
-            public Orient(String marka, int cost, int time_hour, int time_minute, int time_second) {
-                super(marka, cost, time_hour, time_minute, time_second);}
-        }
-
-        class Swatch extends Clockz {
-            public Swatch(String marka, int cost, int time_hour, int time_minute, int time_second) {
-                super(marka, cost, time_hour, time_minute, time_second);}}
 
 

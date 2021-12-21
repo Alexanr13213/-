@@ -1,27 +1,31 @@
 package com;
 
-import com.Clockss.Clock;
-import com.Clockss.Clockz;
+import com.Clockss.*;
 import com.Clockss.TimeException;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Main {
-    public static void main(String[] args) {
-        List<Clock> list = new ArrayList();
-        Clock quartz;
-        list.add(quartz("Quartz", 1000, 0, 0));
+    public void main(String[] args) {
+        List<Clock> showCase = Arrays.asList(
+        new Quartz("Quartz", 1000, 0, 0),
+        new Casio("Casio", 23000, 0, 0),
+        new Omega("Omega", 3500, 0, 0),
+        new Tissot("Tissot", 2750, 0, 0));
 
-        quartz = new quartz("Quartz", 1000, 0, 0);
-        Clock casio = new casio("Casio", 23000, 0, 0);
-        Clock Omega = new Omega("Omega", 3500, 0, 0);
-        Clock Tissot = new Tissot("Tissot", 2750, 0, 0);
-        Clockz Rolex = new Rolex("Rolex", 15000, 0, 0, 0);
-        Clockz Cartier = new Cartier("Cartier", 10000, 0, 0, 0);
-        Clockz Orient = new Orient("Rolex", 1000, 0, 0, 0);
-        Clockz Swatch = new Swatch("Rolex", 150000, 0, 0, 0);
+        List<Clockz> showCase1 = Arrays.asList(
+        new Rolex("Rolex", 15000, 0, 0, 0),
+        new Cartier("Cartier", 10000, 0, 0, 0),
+        new Orient("Rolex", 1000, 0, 0, 0),
+        new Swatch("Rolex", 150000, 0, 0, 0));
+
         Scanner scanner = new Scanner(System.in);
 
 
@@ -37,18 +41,18 @@ public class Main {
         switch (vybor) {
             case 1 -> {
 
-                System.out.println("Часы Quartz");
-                quartz.toString();
-                System.out.println("1.Установите время");
-                System.out.println("2.Переведите время вперед");
+                System.out.println("Часы Quartz\n");
+                Quartz.String();
+                System.out.println("1.Установите время\n");
+                System.out.println("2.Переведите время вперед\n");
 
                 int vybor2 = scanner.nextInt();
 
                 switch (vybor2) {
                     case 1 -> {
                         try {
-                            quartz.set_time();
-                            quartz.check(time_hour, time_minute);
+                            Quartz.set_time();
+                            Quartz.check(time_hour, time_minute);
                         } catch (TimeException e) {
                             System.out.println(e.getMessage());
                         }
@@ -59,7 +63,7 @@ public class Main {
                         time_hour = scanner.nextInt();
                         System.out.println("Сколько минут добавить?");
                         time_minute = scanner.nextInt();
-                        quartz.forward(time_hour, time_minute);
+                        Quartz.forward(time_hour, time_minute);
 
                     }
                 }
@@ -67,7 +71,7 @@ public class Main {
             }
             case 2 -> {
                 System.out.println("Часы Casio");
-                casio.toString();
+                Casio.String();
                 System.out.println("1.Установите время");
                 System.out.println("2.Переведите время вперед");
                 int vybor2 = scanner.nextInt();
@@ -75,8 +79,8 @@ public class Main {
                     case 1 -> {
 
                         try {
-                            casio.set_time();
-                            casio.check(time_hour, time_minute);
+                            Casio.set_time();
+                            Casio.check(time_hour, time_minute);
                         } catch (TimeException e) {
                             System.out.println(e.getMessage());
                         }
@@ -88,7 +92,7 @@ public class Main {
                         time_hour = scanner.nextInt();
                         System.out.println("Сколько минут добавить?");
                         time_minute = scanner.nextInt();
-                        casio.forward(time_hour, time_minute);
+                        Casio.forward(time_hour, time_minute);
 
                     }
                 }
@@ -96,7 +100,7 @@ public class Main {
             }
             case 3 -> {
                 System.out.println("Часы Omega");
-                Omega.toString();
+                Omega.String();
                 System.out.println("1.Установите время");
                 System.out.println("2.Переведите время вперед");
                 int vybor2 = scanner.nextInt();
@@ -124,7 +128,7 @@ public class Main {
             }
             case 4 -> {
                 System.out.println("Часы Tissot");
-                Tissot.toString();
+                Tissot.String();
                 System.out.println("1.Установите время");
                 System.out.println("2.Переведите время вперед");
                 int vybor2 = scanner.nextInt();
@@ -149,10 +153,6 @@ public class Main {
 
             }
         }
-    }
-
-    private static Clock quartz(String quartz, int i, int i1, int i2) {
-        return null;
     }
 }
 
