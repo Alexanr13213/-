@@ -63,12 +63,36 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-		private void эквализаторToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			Equalizator equal = new Equalizator();
-			Bitmap resultImage = equal.Equalization(image);
+        private void волня30ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Wave30 wave30 = new Wave30();
+			Bitmap resultImage = wave30.processImage(image);
 			pictureBox1.Image = resultImage;
 			pictureBox1.Refresh();
 		}
-	}
+
+        private void волня60ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Wave60 wave60 = new Wave60();
+			Bitmap resultImage = wave60.processImage(image);
+			pictureBox1.Image = resultImage;
+			pictureBox1.Refresh();
+		}
+
+        private void превиттToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+			Prewit prewit = new Prewit();
+			Bitmap resultImage = prewit.processImage(image);
+			pictureBox1.Image = resultImage;
+			pictureBox1.Refresh();
+		}
+
+        //private void эквализаторToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //	Equalizator equal = new Equalizator();
+        //	Color resultImage = equal.Equalization(image);
+        //	pictureBox1. = resultImage;
+        //	pictureBox1.Refresh();
+        //}
+    }
 }

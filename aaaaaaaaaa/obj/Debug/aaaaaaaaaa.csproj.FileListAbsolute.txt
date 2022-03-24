@@ -9,3 +9,13 @@ C:\Users\tanap\source\repos\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.csproj.GenerateResou
 C:\Users\tanap\source\repos\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.csproj.CoreCompileInputs.cache
 C:\Users\tanap\source\repos\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.exe
 C:\Users\tanap\source\repos\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.pdb
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.csproj.AssemblyReference.cache
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.Form1.resources
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.csproj.GenerateResource.cache
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.Properties.Resources.resources
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\bin\Debug\aaaaaaaaaa.exe.config
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\bin\Debug\aaaaaaaaaa.exe
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\bin\Debug\aaaaaaaaaa.pdb
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.exe
+C:\Users\Alexandr\Desktop\aaaaaaaaaa\obj\Debug\aaaaaaaaaa.pdb
