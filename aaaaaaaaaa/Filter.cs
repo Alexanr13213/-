@@ -9,14 +9,14 @@ namespace aaaaaaaaaa
 {
 	abstract class Filter
 	{
-		protected abstract Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y);
+		protected abstract Color calculateNewPixelColor(Bitmap sourceImage, int x, int y);
 
 		public Bitmap processImage(Bitmap sourceImage)
 		{
 			Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
 			for (int i = 0; i < sourceImage.Width; i++) {
 				for (int j = 0; j < sourceImage.Height; j++) {
-					resultImage.SetPixel(i, j, CalculateNewPixelColor(sourceImage, i, j));
+					resultImage.SetPixel(i, j, calculateNewPixelColor(sourceImage, i, j));
 				} 
 			}
 			return resultImage;

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace aaaaaaaaaa
 {
-    internal class Gauss : Matrix
+    internal class Gauss : MatrixFilter
     {
         public void createGaussKernel(int radius, float sigma)
         {

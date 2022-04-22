@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace aaaaaaaaaa
 {
-    internal class Blur : Matrix
+    internal class Blur : MatrixFilter
     {
         public Blur() {
             int sizeX = 3;

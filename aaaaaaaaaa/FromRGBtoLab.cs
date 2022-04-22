@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing;
 //где то тут есть погрешность, в числах не вижу где, но она на уровне красного канала
 namespace aaaaaaaaaa
@@ -10,14 +6,14 @@ namespace aaaaaaaaaa
 	internal class FromRGBtoLab : Filter
 	{
 
-		protected override Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y)
+		protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
 		{
 
-			Color sourceColor = sourceImage.GetPixel(x, y);//Просто получаем пиксели
+			Color sourseColor = sourceImage.GetPixel(x, y);//Просто получаем пиксели
 			//из RGB в Lab
-			double var_R = sourceColor.R / 255.0;
-			double var_G = sourceColor.G / 255.0;
-			double var_B = sourceColor.B / 255.0;
+			double var_R = sourseColor.R / 255.0;
+			double var_G = sourseColor.G / 255.0;
+			double var_B = sourseColor.B / 255.0;
 
 			if (var_R > 0.04045) var_R = Math.Pow(((var_R + 0.055) / 1.055), 2.4);
 			else var_R = var_R / 12.92;

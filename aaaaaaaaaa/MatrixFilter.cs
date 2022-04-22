@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace aaaaaaaaaa
 {
@@ -16,7 +11,7 @@ namespace aaaaaaaaaa
             this.kernel = kernel;
         }
 
-        protected override Color CalculateNewPixelColor(Bitmap sourceImage, int x, int y)
+        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
             int radiusX = kernel.GetLength(0) / 2;
             int radiusY = kernel.GetLength(1) / 2;
