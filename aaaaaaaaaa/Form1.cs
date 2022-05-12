@@ -14,7 +14,7 @@ namespace aaaaaaaaaa
 			InitializeComponent();
 		}
 
-		private void открытьToolStripMenuItem_Click(object sender, EventArgs e)
+		private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog dialog = new OpenFileDialog();
 			dialog.Filter = "All files (*.*) | *.*";
@@ -26,7 +26,7 @@ namespace aaaaaaaaaa
 			}
 		}
 
-		private void инверсияToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ReversToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Invert invert = new Invert();
 			Bitmap resultImage = invert.processImage(image);
@@ -34,7 +34,7 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-		private void конвертерRGBLabToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ConverterRGBLabToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			FromRGBtoLab convert = new FromRGBtoLab();
 			Bitmap resultImage = convert.processImage(image);
@@ -42,7 +42,7 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-		private void волна30ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void Wave30ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Wave30 wave = new Wave30();
 			Bitmap resultImage = wave.processImage(image);
@@ -50,7 +50,7 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-		private void волна60ToolStripMenuItem_Click(object sender, EventArgs e)
+		private void Wave60ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Wave60 Wave = new Wave60();
 			Bitmap resultImage = Wave.processImage(image);
@@ -59,7 +59,7 @@ namespace aaaaaaaaaa
 
 		}
 
-		private void превитToolStripMenuItem_Click_1(object sender, EventArgs e)
+		private void PrewittToolStripMenuItem_Click_1(object sender, EventArgs e)
 		{
 			Prewit previt = new Prewit();
 			Bitmap resultImage = previt.processImage(image);
@@ -68,7 +68,7 @@ namespace aaaaaaaaaa
 
 		}
 
-        private void гауссToolStripMenuItem_Click(object sender, EventArgs e)
+        private void GaussToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			Gauss gauss = new Gauss();
 			Bitmap resultImage = gauss.processImage(image);
@@ -76,7 +76,7 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-        private void усреднениеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MiddleToolStripMenuItem_Click(object sender, EventArgs e)
         {
 			Blur blur = new Blur();
 			Bitmap resultImage = blur.processImage(image);
@@ -84,7 +84,7 @@ namespace aaaaaaaaaa
 			pictureBox1.Refresh();
 		}
 
-        private void эквализацияГистограммаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EqualizationGistToolStripMenuItem_Click(object sender, EventArgs e)
         {
 				Image resultImage = CalculateBarChart(image);
 				pictureBox2.Image = resultImage;
@@ -224,28 +224,28 @@ namespace aaaaaaaaaa
 			return barChart;
 		}
 
-		private void открытиеToolStripMenuItem_Click(object sender, EventArgs e)
+		private void OpeningToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			MathMorf mathmorf = new MathMorf();
 			Bitmap resultImage = mathmorf.processImage(image);
-			Erozia erozia = new Erozia();
-			resultImage = erozia.processImage(image);
+			//Erozia erozia = new Erozia();
+			//resultImage = erozia.processImage(image);
 			pictureBox1.Image = resultImage;
 			pictureBox1.Refresh();
 
 		}
 
-		private void закрытиеToolStripMenuItem_Click(object sender, EventArgs e)
+		private void ClosingToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			Erozia erozia = new Erozia();
-			Bitmap resultImage = erozia.processImage(image);
-			MathMorf mathmorf = new MathMorf();
-			resultImage = mathmorf.processImage(image);
-			pictureBox1.Image = resultImage;
+			Bitmap sourceImage = erozia.processImage(image);
+			//MathMorf mathmorf = new MathMorf();
+			//resultImage = mathmorf.processImage(image);
+			pictureBox1.Image = sourceImage;
 			pictureBox1.Refresh();
 		}
 
-		private void градиентГраницаToolStripMenuItem_Click(object sender, EventArgs e)
+		private void FadeBorderToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			GradientBorder gradientBorder = new GradientBorder();
 			gradientBorder.EdgeDetection(image,10);

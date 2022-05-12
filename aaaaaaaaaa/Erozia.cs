@@ -8,43 +8,48 @@ namespace aaaaaaaaaa
     {
         public Bitmap processImage(Bitmap sourceImage)
         {
+            int W = sourceImage.Width;
+            int H = sourceImage.Height;
+            Bitmap resultImage = new Bitmap(W, H);
 
-            List<Color> colorlistErosion = new List<Color>();
-            int colorValueR, colorValueG, colorValueB;
-            int tel = 0;
+            // УСТАНОВИТЬ РАЗМЕРЫ СТРУКТУРНОГО ЭЛЕМЕНТА
+            int MW = 3;
+            int MH = 5;
+            int[,] mask = new int[MW, MH];
 
-            for (int y = 0; y < sourceImage.Height; y++)
+            mask[0, 0] = 0;
+            mask[0, 1] = 1;
+            mask[0, 2] = 0;
+
+            mask[1, 0] = 1;
+            mask[1, 1] = 1;
+            mask[1, 2] = 1;
+
+            mask[2, 0] = 0;
+            mask[2, 1] = 1;
+            mask[2, 2] = 0;
+
+
+            for (int y = MH / 2; y < H - MH / 2; y++)
             {
-                for (int x = 0; x < sourceImage.Width; x++)
+                for (int x = MW / 2; x < W - MW / 2; x++)
                 {
-                    Color col = sourceImage.GetPixel(x, y);
-                    colorValueR = col.R; colorValueG = col.G; colorValueB = col.B;
-                    for (int a = -1; a < 2; a++)
+                    int min = 1000000;
+                    for (int j = -MH / 2; j <= MH / 2; j++)
                     {
-                        for (int b = -1; b < 2; b++)
+                        for (int i = -MW / 2; i <= MW / 2; i++)
                         {
-                            try
+                            if ((mask[i + MW / 2, j + MH / 2] == 1) && (sourceImage.GetPixel(x + i, y + j).R < min))
                             {
-                                Color col2 = sourceImage.GetPixel(x + a, y + b);
-                                colorValueR = Math.Min(colorValueR, col2.R);
-                                colorValueG = Math.Min(colorValueG, col2.G);
-                                colorValueB = Math.Min(colorValueB, col2.B);
-                            }
-                            catch
-                            {
+                                min = sourceImage.GetPixel(x + i, y + j).R;
                             }
                         }
+                        resultImage.SetPixel(x, y, Color.FromArgb(255, min, min, min));
                     }
-                    colorlistErosion.Add(Color.FromArgb(0 + colorValueR, 0 + colorValueG, 0 + colorValueB));
                 }
             }
-            for (int een = 0; een < sourceImage.Height; een++)
-                for (int twee = 0; twee < sourceImage.Width; twee++)
-                {
-                    sourceImage.SetPixel(twee, een, colorlistErosion[tel]);
-                    tel++;
-                }
-            return sourceImage;
+            resultImage.Save("C:/Users/Alexandr/hgjhghjhj.jpg");
+            return resultImage;
         }
         
     }
