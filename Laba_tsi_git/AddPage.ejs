@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style.css" type="text/css"/>
+    </head>
+    <body>
+        <div class = "addPage">
+            <img class="home_button" src="./home.png" width="35" height="35" alt="">
+            <div class="addBox">
+                <form class = "form" enctype="multipart/form-data">
+                    <h1 class="form_title">Добавить новую запись</h1>
+                    <input type="text" class="form_input" placeholder="Наименование записи" name = "note" required>
+                    <textarea rows = "1" class="form_input" placeholder="Текстовая запись" name = "note_text" required></textarea>
+                    <input type="file" class="form_input" name="filedata"  multiple>
+                    <div class="form_marks">
+                        <div class="marks_title">Метки</div>
+                        <div class="marks_content">
+                            <ul>
+                                <button type="button" class = "add_mark">+</button>
+                            </ul>
+                        </div>
+                    </div>
+                    <input type="button" class="form_button" value="Добавить"></input>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src = "./addPage.js"></script>
+</html>

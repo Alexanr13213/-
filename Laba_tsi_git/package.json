@@ -1,0 +1,25 @@
+{
+  "name": "lababoratornya2",
+  "main": "Server.js",
+  "scripts": {
+    "dev": "nodemon Server.js",
+    "start": "node server.js"
+  },
+  "author": "Alex13213",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "g": "^2.0.1",
+    "module_name": "^1.0.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "pg-promise": "^10.15.4"
+  },
+  "version": "1.0.0",
+  "keywords": [],
+  "description": ""
+}
