@@ -25,7 +25,6 @@ public class Converter {
 
 class ConvertText{
     public static int convert(String filePath, String ext, String outPath) {
-        // Используется "очень сложный" механизм конвертации
         System.out.println("Конвертирую текст");
         File in = new File(filePath);
         File out = new File(outPath + "\\"+ FilenameUtils.getBaseName(filePath) + "." + ext);
@@ -41,7 +40,6 @@ class ConvertText{
 
 class ConvertImage{
     public static int convert(String filePath, String ext, String outPath) {
-        // Используется "очень сложный" механизм конвертации
         System.out.println("Конвертирую картинку");
         File in = new File(filePath);
         File out = new File(outPath + "\\"+ FilenameUtils.getBaseName(filePath) + "." + ext);
@@ -57,7 +55,6 @@ class ConvertImage{
 
 class ConvertPDF{
     public static int convert(String filePath, String ext, String outPath) {
-        // Используется "очень сложный" механизм конвертации
         System.out.println("Конвертирую pdf");
         File in = new File(filePath);
         File out = new File(outPath + "\\"+ FilenameUtils.getBaseName(filePath) + "." + ext);
@@ -73,7 +70,6 @@ class ConvertPDF{
 
 class ConvertPPTX{
     public static int convert(String filePath, String ext, String outPath) {
-        // Используется "очень сложный" механизм конвертации
         System.out.println("Конвертирую презентацию");
         File in = new File(filePath);
         File out = new File(outPath + "\\"+ FilenameUtils.getBaseName(filePath) + "." + ext);
